@@ -21,5 +21,3 @@ int solution(string my_string, string is_prefix) {
     cout << 0;  
     return 0;  
 }  
-
-![2-1 양꼬치 과제](../assets/2-2.png)
