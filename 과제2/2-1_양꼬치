@@ -11,4 +11,6 @@ int solution(int n, int k) {
     ser_k = n/10;
     answer = 12000*n + 2000*(k-ser_k);
     return answer;
+
+![2-1 양꼬치 과제](assets/2-1.png)
 }
