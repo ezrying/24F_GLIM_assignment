@@ -1,0 +1,21 @@
+#include <string>
+#include <vector>
+#include <iostream>
+
+using namespace std;
+
+int solution(vector<vector<int>> board, int k) {
+    // 이중for문으로 x축 증가시키면서 y축에 대해서도 체크할수 있게
+    // 범위 조심, .size() 출력은 행 개수이므로 인덱싱 시 -1
+    // 따라서 i<=board.size()가 아니라 i<board.size()
+    int answer = 0;
+    for(int i=0;i<board.size();i++){
+        for(int j=0;j<board[i].size();j++){
+            if(i+j<=k){
+                answer += board[i][j];
+            }
+            }
+        }
+    cout << answer;
+    return answer;
+    }
