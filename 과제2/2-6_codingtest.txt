@@ -1,0 +1,24 @@
+#include <string>
+#include <vector>
+#include <iostream>
+
+using namespace std;
+
+vector<int> solution(vector<int> arr, vector<int> query) {
+    //query[i] = num이라 하고, i가 짝수면 array[num] 뒷부분 지우고 i가 홀수면 array[num] 앞부분 지우기
+    //push_back으로는 슬라이싱 구현이 힘들다
+    int num = 0;
+    vector<int> answer;
+    for(int i=0;i<query.size();i++){
+        num=query[i];
+        if(i%2==0){
+            //끝부분은 포함x (begin,begin+2)면 x[0],x[1]만 슬라이싱되고 x[2]는포함x
+            arr =  vector<int>(arr.begin(),arr.begin()+num+1);
+            }
+        else{
+            arr = vector<int>(arr.begin()+num,arr.end());
+            }
+        }
+    answer = arr;
+    return answer;
+    }
