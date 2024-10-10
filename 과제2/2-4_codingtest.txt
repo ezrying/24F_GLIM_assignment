@@ -1,0 +1,21 @@
+#include <iostream>
+#include <string>
+#include <vector>
+
+using namespace std;
+
+int solution(int a, int b) {
+    // 문자열로 바꾸고 concatenate 한 다음에 다시 정수로 바꿔서 크기 비교 & 리턴
+    string a1 = to_string(a);
+    string a2 = to_string(b);
+    int c = stoi(a1+a2);
+    int d = stoi(a2+a1);
+    
+    if(c>=d){
+        cout << c << endl;
+        return c;
+    } else{
+        cout << d << endl;
+        return d;
+    }
+}
