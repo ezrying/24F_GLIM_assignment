@@ -1,5 +1,6 @@
 #include <string>
 #include <vector>
+#include <iostream>
 
 using namespace std;
 
@@ -10,5 +11,6 @@ int solution(int n, int k) {
     int ser_k = 0;  
     ser_k = n/10;  
     answer = 12000*n + 2000*(k-ser_k);  
+    cout << answer
     return answer;  
 }
